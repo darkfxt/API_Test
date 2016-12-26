@@ -4,10 +4,13 @@
 angular.module('hotelsListModule',[
      'ui-rangeSlider'
     ,'underscore'
-//    ,'ui.bootstrap'
-    ,'ngAnimate', 'ngSanitize', 'ui.bootstrap'
+    ,'ngAnimate'
+    ,'ngSanitize'
+    ,'ui.bootstrap'
     ,'hotelsListController'
     ,'hotelsListComponent'
     ,'hotelsListService'
     ,'hotelsListFilter'
+    ,'imageSliderModule'
+    ,'hotelDescriptionModule'
 ]);

@@ -9,19 +9,28 @@ var amenities = new Schema ({
     "available": Boolean
 });
 
+var description = new Schema ({
+    "name": String,
+    "regimen": String,
+    "stars": Number,
+    "amenities": [amenities]
+});
+
 var imagenes = new Schema ({
     "description": String,
     "url": String
 });
 
+var price = new Schema ({
+    "value": Number,
+    "payMethod": String
+})
+
 const hotelSchema = new Schema ({
-    name: String,
-    stars: Number,
-    price: Number,
-    regimen: {type: String},
-    imagenes: [imagenes],
+    description: description,
     decorators: {type: Array, "default":[]},
-    amenities: [amenities]
+    imagenes: [imagenes],
+    price: price
 });
 
 const hotelModel = mongoose.model('Hotel', hotelSchema);

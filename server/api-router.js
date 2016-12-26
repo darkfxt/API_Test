@@ -6,15 +6,13 @@ var Router = express.Router();
 
 var hotelsCtrl = require('./hotels').Controller;
 
-module.exports = function (app) {
+// *** Rutas de mi API ***
+Router.get('/', function( req, res ){
+    res.render("index", {});
+});
 
-    // *** Rutas de mi API ***
-    app.get('/', function( req, res ){
-        res.render("index", {});
-    });
+Router.get('/api/hotels', hotelsCtrl.findAllHotels);
 
-    app.get('/api/hotels', hotelsCtrl.findAllHotels);
+Router.post('/api/hotels', hotelsCtrl.addHotel);
 
-    app.post('/api/hotels', hotelsCtrl.addHotel);
-
-};
+module.exports = Router;

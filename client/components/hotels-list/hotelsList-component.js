@@ -3,6 +3,6 @@
  */
 angular.module('hotelsListComponent',[])
     .component('hotelsList', {
-         templateUrl:'hotels/hotels.template.html'
+         templateUrl:'/static/components/hotels-list/hotelsList-template.html'
        , controller: 'hotelsListCtrl'
     });

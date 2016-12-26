@@ -1,0 +1,14 @@
+<div class="container slider">
+    <img  ng-repeat="slide in $ctrl.slides" class="slide" ng-hide="!isCurrentlySelected($index)" ng-src="{{ slide.url }}">
+    <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
+    <a class="arrow next" href="#" ng-click="prevSlide()"></a>
+    <nav class="nav">
+        <div class="wrapper">
+            <ul class="dots">
+                <li class="dot" ng-repeat="slide in $ctrl.slides">
+                    <a href="#" ng-class="{'active':isCurrentlySelected($index)}"
+                       ng-click="setCurrentlySelected($index);">{{slide.description}}</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>

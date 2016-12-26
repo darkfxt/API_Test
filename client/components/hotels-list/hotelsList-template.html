@@ -108,60 +108,25 @@
                 <li ng-repeat="hotel in $ctrl.hotels | price:userMinPrice:userMaxPrice | filtrarEstrellas:$ctrl.selEstrellas | orderBy:$ctrl.orderProp" >
                     <div class="col-md-12 hotel-find">
                         <div class="col-md-4 col-xs-9 hotel-art">
-                            <!-- Genero el carousel para las imágenes -->
-                            <div class="result-slider col-12">
+                            <!-- Comienzo Slider de Imágenes -->
+                            <div class="result-slider">
 
                                     <div ng-repeat="promo in hotel.decorators" class="col-12 offer">
                                         <p data-ng-show="promo.rec == true" class="offer-text hotel-recomendado" style="margin:0 0 0 0px;">¡Hotel recomendado!</p>
                                     </div>
-
-                                <div class="carousel">
-                                        <div class="carousel-inner">
-                                           <div uib-carousel ng-if="$index == 0" active="active" interval="myInterval">
-                                                <div uib-slide ng-repeat="photos in hotel.imagenes" index="photos.order">
-                                                    <img ng-src="{{ '../common/img/hotels/' + photos.url }}">
-                                                    <!--<div class="carousel-caption">
-                                                        <h4>{{ photos.description }}</h4>
-                                                    </div>-->
-                                                </div>
-                                            </div>
-
-                                            <div uib-carousel ng-if="$index != 0" active="" interval="myInterval">
-                                                <div uib-slide ng-repeat="photos in hotel.imagenes" index="photos.order">
-                                                    <img ng-src="{{ '../common/img/hotels/' + photos.url }}">
-                                                    <!--<div class="carousel-caption">
-                                                        <h4>{{ photos.description }}</h4>
-                                                    </div>-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
+                                <!-- Comienzo Slider como Componente -->
+                                <image-slider slides="hotel.imagenes" ></image-slider>
+                                <!-- Fin Slider como componente -->
                             </div>
+                            <!-- Final Slider de Imágenes -->
                         </div>
                         <div class="col-md-5 col-xs-4">
-                            <div class="hotel-description">
-                                <h1 class="hotel-name">{{ hotel.name }}</h1>
-                                <p class="starsByHotel"><span class="glyphicon glyphicon-star gold" ng-repeat="i in [] | range:hotel.stars" ></span></p>
-                                <p class="regimenByHotel">
-                                    <i data-ng-show="hotel.regimen == 'Solo habitación'" class="fa fa-bed"></i><i data-ng-show="hotel.regimen == 'Incluye Desayuno'" class="fa fa-coffee"></i>
-                                    <span class="regimenDescription">{{ hotel.regimen }}</span>
-                                </p>
-                            </div>
-                            <div ng-if="hotel.amenities.length > 0" class="suite-amenities">
-                                <ul class="lista">
-                                    <li ng-repeat="amit in hotel.amenities | limitTo:6">
-                                        <div class="lista-iconos" ng-switch on="amit.name">
-                                            <i ng-switch-when="pool" data-hint="Pileta" class="icon-swimming large-icon col-2"></i>
-                                            <i ng-switch-when="wifi" class="fa fa-wifi large-icon col-2"></i>
-                                            <i ng-switch-when="bar" class="fa fa-beer large-icon col-2"></i>
-                                            <i ng-switch-when="restaurant" class="fa fa-cutlery large-icon col-2"></i>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
+                        <!-- Inicio Descripción del hotel -->
+                            <hotel-description desription="hotel.description"></hotel-description>
+                        <!-- Final Descripcion del Hotel -->
                         </div>
                         <div class="col-md-3 col-xs-4">
+                        <!-- Inicio Caja de Precio -->
                             <div class="price-box">
                                 <p class="price-description">Precio por noche por habitación</p>
                                 <h2 class="priceByNight">{{ hotel.price | currency }}</h2>
@@ -169,6 +134,7 @@
                                 <a target="_self" class="button button--lg button--secondary button--block button-detail"
                                    href="#">Ver hotel</a>
                             </div>
+                        <!-- Final Caja de Precio -->
                         </div>
                     </div>
                 </li>

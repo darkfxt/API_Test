@@ -7,7 +7,7 @@ module.exports = {
     context: __dirname + '/client/hotels-list',
     target: 'node',
     entry: {
-        app: './hotels-list.module.js',
+        app: './hotelsList-module.js',
         vendor: ['angular', 'angular-rangeslider', 'underscore', 'angular-animate', 'angular-sanitize', 'angular-ui-bootstrap', 'jquery', 'mongoose', 'mongodb']
     },
     output: {
