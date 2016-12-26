@@ -1,0 +1,178 @@
+<div class="row">
+    <div class="col-md-3 col-xs-12" >
+        <div class="filtrar-titulo">Filtrar</div>
+        <div id="search-filters" class="panel fxt-click-panel">
+
+            <div class="panel-body">
+                <div class="panel-heading col-12">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse0">
+                            <span class="glyphicon glyphicon-search"></span>
+                            <span>Nombre de hotel</span>
+
+                        </a>
+
+                    </h4>
+
+                </div>
+                <div id="collapse0" class="panel-collapse collapse in">
+                    <input ng-model="$ctrl.query" />
+                </div>
+
+                <div class="panel-heading col-12">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">
+                            <span class="glyphicon glyphicon-usd"></span> Precio por noche
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <!--<div id="slider-range"></div>-->
+                    <div range-slider min="minPrice" max="maxPrice" model-min="userMinPrice" model-max="userMaxPrice" step="5" filter="currency" filter-options="USD$" style="margin: 0 0 0 0px;"></div>
+                    <div class="col-6"><span data-ng-bind="userMinPrice | currency"></span></div><div class="col-6 derecha"><span data-ng-bind="userMaxPrice | currency"></span></div>
+
+                </div>
+
+                <div class="panel-heading col-12">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">
+                            <span class="glyphicon glyphicon-star"></span> Estrellas
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse in">
+                    <ul class="list-group">
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="$ctrl.checkboxCtrl.All" ng-change="$ctrl.setStars($ctrl.checkboxCtrl.All)" checked>
+                                    Todas las estrellas
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="5s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value5" ng-change="$ctrl.selEstrellas[4]=$ctrl.checkboxCtrl.value5" ng-true-value="5" ng-false-value="0">
+                                    <div><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1,2,3,4]"></span> </div>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="4s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value4" ng-change="$ctrl.selEstrellas[3]=$ctrl.checkboxCtrl.value4" ng-true-value="4" ng-false-value="0">
+                                    <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1,2,3]" ></span> </div>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="3s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value3" ng-change="$ctrl.selEstrellas[2]=$ctrl.checkboxCtrl.value3" ng-true-value="3" ng-false-value="0">
+                                    <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1,2]" ></span> </div>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="2s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value2" ng-change="$ctrl.selEstrellas[1]=$ctrl.checkboxCtrl.value2" ng-true-value="2" ng-false-value="0">
+                                    <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1]" ></span> </div>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="1s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value1" ng-change="$ctrl.selEstrellas[0]=$ctrl.checkboxCtrl.value1" ng-true-value="1" ng-false-value="0">
+                                    <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0]" ></span> </div>
+                                </label>
+                            </div>
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Genero el contenedor con la vista de los hoteles -->
+    <!-- En tablets o phones es full width en desktop es 75% -->
+
+    <div class="col-md-9 col-xs-12" >
+        <ul class="hoteles">
+            <div class="col-12">
+                <div class="order-select" style="float: right;">
+                    <label for="ordenar" class="label">Ordenar</label>
+                    <select id="ordenar" ng-model="$ctrl.orderProp" class="order-by">
+                        <option value="decorators.available">Más relevantes</option>
+                        <option value="price">Precio más bajo</option>
+                        <option value="-price">Precio más alto</option>
+                        <option value="stars">Menos estrellas</option>
+                        <option value="-stars">Más estrellas</option>
+                    </select>
+                </div>
+            <!-- <li ng-repeat="hotel in $ctrl.hotels | filtrarEstrellas:$ctrl.selEstrellas | orderBy:$ctrl.orderProp"> -->
+                <li ng-repeat="hotel in $ctrl.hotels | price:userMinPrice:userMaxPrice | filtrarEstrellas:$ctrl.selEstrellas | orderBy:$ctrl.orderProp" >
+                    <div class="col-md-12 hotel-find">
+                        <div class="col-md-4 col-xs-9 hotel-art">
+                            <!-- Genero el carousel para las imágenes -->
+                            <div class="result-slider col-12">
+
+                                    <div ng-repeat="promo in hotel.decorators" class="col-12 offer">
+                                        <p data-ng-show="promo.rec == true" class="offer-text hotel-recomendado" style="margin:0 0 0 0px;">¡Hotel recomendado!</p>
+                                    </div>
+
+                                <div class="carousel">
+                                        <div class="carousel-inner">
+                                           <div uib-carousel ng-if="$index == 0" active="active" interval="myInterval">
+                                                <div uib-slide ng-repeat="photos in hotel.imagenes" index="photos.order">
+                                                    <img ng-src="{{ '../common/img/hotels/' + photos.url }}">
+                                                    <!--<div class="carousel-caption">
+                                                        <h4>{{ photos.description }}</h4>
+                                                    </div>-->
+                                                </div>
+                                            </div>
+
+                                            <div uib-carousel ng-if="$index != 0" active="" interval="myInterval">
+                                                <div uib-slide ng-repeat="photos in hotel.imagenes" index="photos.order">
+                                                    <img ng-src="{{ '../common/img/hotels/' + photos.url }}">
+                                                    <!--<div class="carousel-caption">
+                                                        <h4>{{ photos.description }}</h4>
+                                                    </div>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-4">
+                            <div class="hotel-description">
+                                <h1 class="hotel-name">{{ hotel.name }}</h1>
+                                <p class="starsByHotel"><span class="glyphicon glyphicon-star gold" ng-repeat="i in [] | range:hotel.stars" ></span></p>
+                                <p class="regimenByHotel">
+                                    <i data-ng-show="hotel.regimen == 'Solo habitación'" class="fa fa-bed"></i><i data-ng-show="hotel.regimen == 'Incluye Desayuno'" class="fa fa-coffee"></i>
+                                    <span class="regimenDescription">{{ hotel.regimen }}</span>
+                                </p>
+                            </div>
+                            <div ng-if="hotel.amenities.length > 0" class="suite-amenities">
+                                <ul class="lista">
+                                    <li ng-repeat="amit in hotel.amenities | limitTo:6">
+                                        <div class="lista-iconos" ng-switch on="amit.name">
+                                            <i ng-switch-when="pool" data-hint="Pileta" class="icon-swimming large-icon col-2"></i>
+                                            <i ng-switch-when="wifi" class="fa fa-wifi large-icon col-2"></i>
+                                            <i ng-switch-when="bar" class="fa fa-beer large-icon col-2"></i>
+                                            <i ng-switch-when="restaurant" class="fa fa-cutlery large-icon col-2"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3 col-xs-4">
+                            <div class="price-box">
+                                <p class="price-description">Precio por noche por habitación</p>
+                                <h2 class="priceByNight">{{ hotel.price | currency }}</h2>
+                                <span class="impuestos-tasas price-description">Impuestos y tasas no incluidos</span>
+                                <a target="_self" class="button button--lg button--secondary button--block button-detail"
+                                   href="#">Ver hotel</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </div>
+</div>

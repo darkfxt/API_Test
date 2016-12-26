@@ -1,0 +1,24 @@
+{
+  "name": "api-almundo",
+  "version": "1.0.0",
+  "description": "API REST para listar hoteles",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "bower install",
+
+    "prestart": "npm install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Matias L. Jerez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.5.2",
+    "dotenv": "^2.0.0",
+    "express": "~4.7.2",
+    "method-override": "~2.1.2",
+    "mongoose": "~3.6.2",
+    "morgan": "~1.2.2",
+    "underscore": "^1.8.3"
+  }
+}

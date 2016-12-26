@@ -1,0 +1,24 @@
+{
+  "name": "api-almundo",
+  "description": "API REST para listar hoteles",
+  "main": "server.js",
+  "authors": [
+    "Matias L. Jerez"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-route": "^1.5.9",
+    "bootstrap": "^3.3.7",
+    "angular-rangeslider": "^0.0.14"
+  }
+}
