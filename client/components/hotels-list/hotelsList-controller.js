@@ -8,14 +8,12 @@ angular.module('hotelsListController',[])
         self.checkboxCtrl = {"All":true, "value1":1, "value2":2, "value3":3, "value4":4, "value5":5  };
         self.orderProp = 'stars';
         self.selEstrellas = [ 1, 2, 3, 4, 5 ] ;
-        $scope.myInterval = -1;
         $scope.noWrapSlides = false;
 
 
         Hoteles.get()
             .success( function ( data ){
                 self.hotels = data;
-                console.log(self.hotels);
 
                 $scope.maxPrice = Math.round(_.max(data, function ( hotel ){ return hotel.price.value }).price.value * 1.1);
                 $scope.userMaxPrice = _.max(data, function ( hotel ){ return hotel.price.value }).price.value;

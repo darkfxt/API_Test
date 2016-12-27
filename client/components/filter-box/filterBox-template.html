@@ -1,0 +1,87 @@
+<div class="filtrar-titulo">Filtrar</div>
+<div id="search-filters" class="panel fxt-click-panel">
+
+    <div class="panel-body">
+        <div class="panel-heading col-12">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse0">
+                    <span class="glyphicon glyphicon-search"></span>
+                    <span>Nombre de hotel</span>
+
+                </a>
+
+            </h4>
+
+        </div>
+        <div id="collapse0" class="panel-collapse collapse in">
+            <input ng-model="$ctrl.query" />
+        </div>
+
+        <div class="panel-heading col-12">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse1">
+                    <span class="glyphicon glyphicon-usd"></span> Precio por noche
+                </a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+            <!--<div id="slider-range"></div>-->
+            <div range-slider min="minPrice" max="maxPrice" model-min="userMinPrice" model-max="userMaxPrice" step="5" filter="currency" filter-options="USD$" style="margin: 0 0 0 0px;"></div>
+            <div class="col-6"><span data-ng-bind="userMinPrice | currency"></span></div><div class="col-6 derecha"><span data-ng-bind="userMaxPrice | currency"></span></div>
+
+        </div>
+
+        <div class="panel-heading col-12">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse2">
+                    <span class="glyphicon glyphicon-star"></span> Estrellas
+                </a>
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse in">
+            <ul class="list-group">
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="$ctrl.checkboxCtrl.All" ng-change="$ctrl.setStars($ctrl.checkboxCtrl.All)" checked>
+                        Todas las estrellas
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input id="5s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value5" ng-change="$ctrl.selEstrellas[4]=$ctrl.checkboxCtrl.value5" ng-true-value="5" ng-false-value="0">
+                        <div><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1,2,3,4]"></span> </div>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input id="4s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value4" ng-change="$ctrl.selEstrellas[3]=$ctrl.checkboxCtrl.value4" ng-true-value="4" ng-false-value="0">
+                        <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1,2,3]" ></span> </div>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input id="3s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value3" ng-change="$ctrl.selEstrellas[2]=$ctrl.checkboxCtrl.value3" ng-true-value="3" ng-false-value="0">
+                        <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1,2]" ></span> </div>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input id="2s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value2" ng-change="$ctrl.selEstrellas[1]=$ctrl.checkboxCtrl.value2" ng-true-value="2" ng-false-value="0">
+                        <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1]" ></span> </div>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input id="1s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value1" ng-change="$ctrl.selEstrellas[0]=$ctrl.checkboxCtrl.value1" ng-true-value="1" ng-false-value="0">
+                        <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0]" ></span> </div>
+                    </label>
+                </div>
+
+
+            </ul>
+        </div>
+
+    </div>
+
+</div>

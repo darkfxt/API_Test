@@ -6,10 +6,12 @@ angular.module('hotelsListModule',[
     ,'underscore'
     ,'ngAnimate'
     ,'ngSanitize'
-    ,'ui.bootstrap'
+
     ,'hotelsListController'
     ,'hotelsListComponent'
     ,'hotelsListService'
     ,'hotelsListFilter'
     ,'hotelClusterModule'
+    ,'orderSelectModule'
+    ,'filterBoxModule'
 ]);

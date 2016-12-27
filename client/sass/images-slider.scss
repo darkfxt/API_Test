@@ -4,19 +4,27 @@
 /* ======= Estilos ======= */
 
 .slider {
-  width: 257px;
-  height: 192px;
+  width: 800px;
+  height: 400px;
   overflow: hidden;
   position: relative;
   background: #e6e6e6;
   border: 20px solid #FFF;
   margin-top: 20px;
 }
-
+.fill{
+  width: 100%;
+}
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  text-align: center;
+  & img{
+    height: 258px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+  }
 }
 
 .arrow {
@@ -29,7 +37,7 @@
   height: 71px;
   outline: none;
   cursor: pointer;
-  background: url(./images/assets/blank.gif) no-repeat;
+  background: url('/static/css/images/assets/blank.gif') no-repeat;
   &.prev {
     opacity: 0.2;
     left: 20px;
@@ -37,13 +45,13 @@
     transition: 0.2s linear all;
     &:hover {
       opacity: 1;
-      background-image: url(./images/assets/paddle_prev_fff.png);
+      background-image: url('/static/css/images/assets/paddle_prev_fff.png');
     }
   }
   &.next {
     opacity: 0.2;
     right: 20px;
-    background-image: url(/static/css/images/assets/paddle_next_999.png);
+    background-image: url('/static/css/images/assets/paddle_next_999.png');
     transition: 0.2s linear all;
     &:hover {
       opacity: 1;
@@ -117,4 +125,39 @@ NAV
     border-color: #FFF;
     background-color: transparent;
   }
+}
+/* ======== Decorators ========= */
+.result-slider {
+  position: relative;
+  display: block;
+}
+.result-slider p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+.hotel-recomendado {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  zoom: 1;
+  margin: 0;
+  line-height: 24px;
+  font-size: 16px;
+}
+.offer-text {
+  background: #2671DD;
+  color: #fff;
+  margin: 0 0 0 0px;
+  padding: 8px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.offer {
+  position: absolute;
+  z-index: 1;
 }

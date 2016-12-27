@@ -6,7 +6,7 @@ angular.module('imageSliderComponent', [])
          templateUrl: '/static/components/images-slider/imagesSlider-template.html'
         ,controller: 'imageSlider-Ctrl'
         ,bindings: {
-             slides: '='
+             slides: '<'
             ,decorators: '<'
         }
     });

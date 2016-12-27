@@ -1,0 +1,50 @@
+.price-box {
+  text-align: center; }
+
+.price-description {
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 8px; }
+
+.priceByNight {
+  color: #DF6800;
+  line-height: 40px;
+  font-size: 36px;
+  font-weight: bold; }
+
+.button.button--block {
+  display: block;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.button.button--secondary {
+  background-color: #002C77;
+  color: #fff;
+  -moz-box-shadow: 0 -2px 0 #00163C inset;
+  -webkit-box-shadow: 0 -2px 0 #00163C inset;
+  box-shadow: 0 -2px 0 #00163C inset; }
+
+.button.button--lg {
+  height: 40px !important;
+  font-size: 20px !important;
+  line-height: 40px !important;
+  padding: 0 16px;
+  font-weight: bold; }
+
+.button {
+  background-color: #777;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  padding: 0 16px;
+  -moz-box-shadow: 0 -2px 0 #777 inset;
+  -webkit-box-shadow: 0 -2px 0 #777 inset;
+  box-shadow: 0 -2px 0 #777 inset; }

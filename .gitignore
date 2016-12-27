@@ -33,6 +33,8 @@ client/libs
 
 # Directorio con datos del requerimiento
 documentacion
+# Directorio con archivos en desuso
+deprecated
 
 # Directory .idea
 .idea
