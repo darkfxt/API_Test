@@ -7,5 +7,6 @@ angular.module('imageSliderComponent', [])
         ,controller: 'imageSlider-Ctrl'
         ,bindings: {
              slides: '='
+            ,decorators: '<'
         }
     });

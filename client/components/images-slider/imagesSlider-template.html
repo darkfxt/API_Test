@@ -1,3 +1,6 @@
+<div ng-repeat="promo in hotel.decorators" class="col-12 offer">
+    <p data-ng-show="promo.rec == true" class="offer-text hotel-recomendado" style="margin:0 0 0 0px;">¡Hotel recomendado!</p>
+</div>
 <div class="container slider">
     <img  ng-repeat="slide in $ctrl.slides" class="slide" ng-hide="!isCurrentlySelected($index)" ng-src="{{ slide.url }}">
     <a class="arrow prev" href="#" ng-click="nextSlide()"></a>

@@ -11,6 +11,5 @@ angular.module('hotelsListModule',[
     ,'hotelsListComponent'
     ,'hotelsListService'
     ,'hotelsListFilter'
-    ,'imageSliderModule'
-    ,'hotelDescriptionModule'
+    ,'hotelClusterModule'
 ]);

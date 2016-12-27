@@ -1,0 +1,21 @@
+<div class="col-md-12 hotel-find">
+    <div class="col-md-4 col-xs-9 hotel-art">
+        <!-- Comienzo Slider de Imágenes -->
+        <div class="result-slider">
+            <!-- Comienzo Slider como Componente -->
+            <image-slider slides="hotelData.imagenes" decorators="hotelData.decorators"></image-slider>
+            <!-- Fin Slider como componente -->
+        </div>
+        <!-- Final Slider de Imágenes -->
+    </div>
+    <div class="col-md-5 col-xs-4">
+        <!-- Inicio Descripción del hotel -->
+        <hotel-description description="hotelData.description"></hotel-description>
+        <!-- Final Descripcion del Hotel -->
+    </div>
+    <div class="col-md-3 col-xs-4">
+        <!-- Inicio Caja de Precio -->
+        <price-box price="hotelData.price"></price-box>
+        <!-- Final Caja de Precio -->
+    </div>
+</div>

@@ -1,15 +1,15 @@
-<!--
 <div class="hotel-description">
-    <h1 class="hotel-name">{{ hotel.name }}</h1>
-    <p class="starsByHotel"><span class="glyphicon glyphicon-star gold" ng-repeat="i in [] | range:hotel.stars" ></span></p>
+    <h1 class="hotel-name">{{ $ctrl.description.name }}</h1>
+    <p class="starsByHotel"><span class="glyphicon glyphicon-star gold" ng-repeat="i in [] | range:$ctrl.description.stars" ></span></p>
     <p class="regimenByHotel">
-        <i data-ng-show="hotel.regimen == 'Solo habitación'" class="fa fa-bed"></i><i data-ng-show="hotel.regimen == 'Incluye Desayuno'" class="fa fa-coffee"></i>
-        <span class="regimenDescription">{{ hotel.regimen }}</span>
+        <i data-ng-show="$ctrl.description.regimen == 'Solo habitación'" class="fa fa-bed"></i><i data-ng-show="$ctrl.description.regimen == 'Incluye Desayuno'" class="fa fa-coffee"></i>
+        <span class="regimenDescription">{{ $ctrl.description.regimen }}</span>
     </p>
 </div>
-<div ng-if="hotel.amenities.length > 0" class="suite-amenities">
+
+<div ng-if="$ctrl.description.amenities.length > 0" class="suite-amenities">
     <ul class="lista">
-        <li ng-repeat="amit in hotel.amenities | limitTo:6">
+        <li ng-repeat="amit in $ctrl.description.amenities | limitTo:6">
             <div class="lista-iconos" ng-switch on="amit.name">
                 <i ng-switch-when="pool" data-hint="Pileta" class="icon-swimming large-icon col-2"></i>
                 <i ng-switch-when="wifi" class="fa fa-wifi large-icon col-2"></i>
@@ -18,5 +18,4 @@
             </div>
         </li>
     </ul>
-</div>-->
-<span>HOLA MUNDO!!!</span>
+</div>

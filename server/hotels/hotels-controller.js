@@ -10,7 +10,7 @@ var findAllHotels = function findAllHotels ( req, res ){
         if( err )
             res.send( 500, err.message );
         // Si encuentro hoteles, los devuelvo en formato json con cod200
-        console.log('GET /hotels');
+        console.log('LOG GET /api/hotels');
         res.json( hotels );
     })
 };

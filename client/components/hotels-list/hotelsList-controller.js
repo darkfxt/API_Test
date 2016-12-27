@@ -15,12 +15,13 @@ angular.module('hotelsListController',[])
         Hoteles.get()
             .success( function ( data ){
                 self.hotels = data;
+                console.log(self.hotels);
 
-                $scope.maxPrice = Math.round(_.max(data, function ( hotel ){ return hotel.price }).price * 1.1);
-                $scope.userMaxPrice = _.max(data, function ( hotel ){ return hotel.price }).price;
+                $scope.maxPrice = Math.round(_.max(data, function ( hotel ){ return hotel.price.value }).price.value * 1.1);
+                $scope.userMaxPrice = _.max(data, function ( hotel ){ return hotel.price.value }).price.value;
 
-                $scope.minPrice = Math.round(_.min(data, function ( hotel ){ return hotel.price }).price * 0.8);
-                $scope.userMinPrice = _.min(data, function ( hotel ){ return hotel.price }).price;
+                $scope.minPrice = Math.round(_.min(data, function ( hotel ){ return hotel.price.value }).price.value * 0.8);
+                $scope.userMinPrice = _.min(data, function ( hotel ){ return hotel.price.value }).price.value;
 
 
 

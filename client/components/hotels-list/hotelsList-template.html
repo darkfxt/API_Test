@@ -104,39 +104,13 @@
                         <option value="-stars">Más estrellas</option>
                     </select>
                 </div>
-            <!-- <li ng-repeat="hotel in $ctrl.hotels | filtrarEstrellas:$ctrl.selEstrellas | orderBy:$ctrl.orderProp"> -->
-                <li ng-repeat="hotel in $ctrl.hotels | price:userMinPrice:userMaxPrice | filtrarEstrellas:$ctrl.selEstrellas | orderBy:$ctrl.orderProp" >
-                    <div class="col-md-12 hotel-find">
-                        <div class="col-md-4 col-xs-9 hotel-art">
-                            <!-- Comienzo Slider de Imágenes -->
-                            <div class="result-slider">
-
-                                    <div ng-repeat="promo in hotel.decorators" class="col-12 offer">
-                                        <p data-ng-show="promo.rec == true" class="offer-text hotel-recomendado" style="margin:0 0 0 0px;">¡Hotel recomendado!</p>
-                                    </div>
-                                <!-- Comienzo Slider como Componente -->
-                                <image-slider slides="hotel.imagenes" ></image-slider>
-                                <!-- Fin Slider como componente -->
-                            </div>
-                            <!-- Final Slider de Imágenes -->
-                        </div>
-                        <div class="col-md-5 col-xs-4">
-                        <!-- Inicio Descripción del hotel -->
-                            <hotel-description desription="hotel.description"></hotel-description>
-                        <!-- Final Descripcion del Hotel -->
-                        </div>
-                        <div class="col-md-3 col-xs-4">
-                        <!-- Inicio Caja de Precio -->
-                            <div class="price-box">
-                                <p class="price-description">Precio por noche por habitación</p>
-                                <h2 class="priceByNight">{{ hotel.price | currency }}</h2>
-                                <span class="impuestos-tasas price-description">Impuestos y tasas no incluidos</span>
-                                <a target="_self" class="button button--lg button--secondary button--block button-detail"
-                                   href="#">Ver hotel</a>
-                            </div>
-                        <!-- Final Caja de Precio -->
-                        </div>
-                    </div>
+                <!-- Recorro el arreglo de hoteles para generar la lista de los mismos -->
+                <!--<li ng-repeat="hotel in $ctrl.hotels | price:userMinPrice:userMaxPrice | filtrarEstrellas:$ctrl.selEstrellas | orderBy:$ctrl.orderProp" >-->
+                <li ng-repeat="hotel in $ctrl.hotels">
+                    <!-- A cada componente hotelCluster le paso un hotel para que le de formato y lo distribuya entre sus childs -->
+                    <!-- Comienzo cluster de hotel -->
+                    <hotel-cluster hotel-data="hotel"></hotel-cluster>
+                    <!-- Final cluster de hotel -->
                 </li>
             </div>
         </ul>
