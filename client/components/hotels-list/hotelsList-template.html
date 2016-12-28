@@ -8,10 +8,11 @@
     <section class="col-md-9 col-xs-12" >
         <ul class="hoteles">
             <li>
-                <order-select></order-select>
+                <order-select order-by="$ctrl.orderProperty"></order-select>
             </li>
             <!-- Recorro el arreglo de hoteles para generar la lista de los mismos -->
-            <li ng-repeat="hotel in $ctrl.hotels" >
+            <!--<li ng-repeat="hotel in $ctrl.hotels | price:userMinPrice:userMaxPrice | filtrarEstrellas:$ctrl.selEstrellas | orderBy:$ctrl.orderProp" >-->
+            <li ng-repeat="hotel in $ctrl.hotels | orderBy:orderProperty" >
                 <!-- A cada componente hotelCluster le paso un hotel para que le de formato y lo distribuya entre sus childs -->
                 <!-- Comienzo cluster de hotel -->
                 <hotel-cluster hotel-data="hotel"></hotel-cluster>

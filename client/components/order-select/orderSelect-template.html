@@ -1,10 +1,10 @@
-<div class="order-select" style="float: right;">
+<div class="order-select">
     <label for="ordenar" class="label">Ordenar</label>
-    <select id="ordenar" ng-model="$ctrl.orderProp" class="order-by">
+    <select id="ordenar" ng-model="orderProp" class="order-by" ng-change="changedValue(orderProp)">
         <option value="decorators.available">Más relevantes</option>
-        <option value="price">Precio más bajo</option>
-        <option value="-price">Precio más alto</option>
-        <option value="stars">Menos estrellas</option>
-        <option value="-stars">Más estrellas</option>
+        <option value="price.value">Precio más bajo</option>
+        <option value="-price.value">Precio más alto</option>
+        <option value="description.stars">Menos estrellas</option>
+        <option value="-description.stars">Más estrellas</option>
     </select>
 </div>

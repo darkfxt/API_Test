@@ -6,7 +6,7 @@ angular.module('hotelsListController',[])
     .controller('hotelsListCtrl', ['$scope', '$http', 'Hoteles', '_', function($scope, $http, Hoteles, _) {
         var self = this;
         self.checkboxCtrl = {"All":true, "value1":1, "value2":2, "value3":3, "value4":4, "value5":5  };
-        self.orderProp = 'stars';
+        self.orderProperty = 'description.stars';
         self.selEstrellas = [ 1, 2, 3, 4, 5 ] ;
         $scope.noWrapSlides = false;
 
@@ -24,6 +24,10 @@ angular.module('hotelsListController',[])
 
 
             });
+
+        $scope.refreshFilter = function (value){
+            console.log(value);
+        };
 
 
         self.setStars = function ( qId ) {

@@ -4,4 +4,5 @@
 angular.module('hotelDescriptionModule', [
      'hotelDescriptionController'
     ,'hotelDescriptionComponent'
+    ,'hotelDescriptionFilter'
 ]);
