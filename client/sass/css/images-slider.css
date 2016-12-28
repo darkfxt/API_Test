@@ -1,34 +1,31 @@
 /* ======= Variables ======= */
-
 /* ======= Mixins ======= */
-
 /* ======= Estilos ======= */
-.slider{
+.slider {
   position: relative;
-  width:100%;
+  width: 100%;
   margin: auto;
   display: block;
   background: #000;
   height: 192px;
   overflow: hidden;
-  white-space: nowrap;
-}
+  white-space: nowrap; }
+
 .img-slider img {
   display: inline-block;
   height: 258px;
   overflow: hidden;
   background-size: cover;
   background-position: 50%;
-  width: 100%;
-}
+  width: 100%; }
 
-.slide{
+.slide {
   position: absolute;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0px 0px 15px #999;
-}
-.icon-arrow{
+  box-shadow: 0px 0px 15px #999; }
+
+.icon-arrow, .icon_fx-arrow-left, .icon_fx-arrow-right {
   padding: 6px;
   position: absolute;
   top: calc(50% - 12px);
@@ -42,50 +39,43 @@
   text-align: center;
   line-height: 24px;
   font-weight: normal;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
+
 .icon_fx-arrow-left {
-  @extend .icon-arrow;
-  left: 8px;
-  & :before {
-    content: "\003c";
-  }
-}
+  left: 8px; }
+  .icon_fx-arrow-left :before {
+    content: "\003c"; }
+
 .icon_fx-arrow-right {
-  @extend .icon-arrow;
-  right: 8px;
-  & :before {
-    content: "\003e";
-  }
-}
+  right: 8px; }
+  .icon_fx-arrow-right :before {
+    content: "\003e"; }
 
 .slide.ng-hide-add, .slide.ng-hide-remove {
-  -webkit-transition:all linear 0.5s;
-  -moz-transition:all linear 0.5s;
-  -o-transition:all linear 0.5s;
-  transition:all linear 0.5s;
-  display:block!important;
-}
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  display: block !important; }
 
-.slide.ng-hide-add.ng-hide-add-active,.slide.ng-hide-remove {
-  opacity:0;
-}
+.slide.ng-hide-add.ng-hide-add-active, .slide.ng-hide-remove {
+  opacity: 0; }
 
-.slide.ng-hide-add,.slide.ng-hide-remove.ng-hide-remove-active {
-  opacity:1;
-}
+.slide.ng-hide-add, .slide.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1; }
+
 /* ======== Decorators ========= */
 .result-slider {
   position: relative;
-  display: block;
-}
+  display: block; }
+
 .result-slider p {
   display: block;
   -webkit-margin-before: 1em;
   -webkit-margin-after: 1em;
   -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-}
+  -webkit-margin-end: 0px; }
+
 .hotel-recomendado {
   display: inline-block;
   vertical-align: top;
@@ -93,8 +83,8 @@
   zoom: 1;
   margin: 0;
   line-height: 24px;
-  font-size: 16px;
-}
+  font-size: 16px; }
+
 .offer-text {
   background: #2671DD;
   color: #fff;
@@ -103,9 +93,8 @@
   text-align: center;
   line-height: 16px;
   font-size: 14px;
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 .offer {
   position: absolute;
-  z-index: 1;
-}
+  z-index: 1; }

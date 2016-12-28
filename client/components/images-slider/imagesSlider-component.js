@@ -3,7 +3,9 @@
  */
 angular.module('imageSliderComponent', [])
     .component('imageSlider', {
-         templateUrl: '/static/components/images-slider/imagesSlider-template.html'
+         restrict: 'AE'
+        ,replace: true
+        ,templateUrl: '/static/components/images-slider/imagesSlider-template.html'
         ,controller: 'imageSlider-Ctrl'
         ,bindings: {
              slides: '<'

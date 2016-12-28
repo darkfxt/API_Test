@@ -5,10 +5,8 @@ $shadow-drop: rgba(119,119,119,0.3);
 .hotel-container {
   background-color: #FFF;
   padding: 8px;
-  position: relative;
   box-shadow: 0px 1px 3px 0px $shadow-drop;
   margin-bottom: 16px;
-  display: block;
 }
 .slider-container {
   display: inline-block;

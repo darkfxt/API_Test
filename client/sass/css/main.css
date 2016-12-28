@@ -1,14 +1,10 @@
 /*************** Estilos para fuentes **************/
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?k5v9ni');
-  src:  url('../fonts/icomoon.eot?k5v9ni#iefix') format('embedded-opentype'),
-  url('../fonts/icomoon.ttf?k5v9ni') format('truetype'),
-  url('../fonts/icomoon.woff?k5v9ni') format('woff'),
-  url('../fonts/icomoon.svg?k5v9ni#icomoon') format('svg');
+  src: url("../fonts/icomoon.eot?k5v9ni");
+  src: url("../fonts/icomoon.eot?k5v9ni#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?k5v9ni") format("truetype"), url("../fonts/icomoon.woff?k5v9ni") format("woff"), url("../fonts/icomoon.svg?k5v9ni#icomoon") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -19,38 +15,35 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-/************* Fin estilos para fuentes **************/
+  -moz-osx-font-smoothing: grayscale; }
 
+/************* Fin estilos para fuentes **************/
 * {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
+
 body {
-  background-color:#f4f4f4;
+  background-color: #f4f4f4;
   font-family: 'Roboto', sans-serif;
-  color: #444;
-}
+  color: #444; }
+
 .gold {
-  color: gold;
-}
+  color: gold; }
+
 .col-4 {
-  width: 33.33%;
-}
+  width: 33.33%; }
+
 .col-2 {
-  width: 16.66%;
-}
+  width: 16.66%; }
+
 .col-6 {
   width: 50%;
-  display: inline-block;
-}
+  display: inline-block; }
+
 .col-12 {
-  width: 100%;
-}
+  width: 100%; }
+
 .clear-padding {
-  padding: 0px;
-}
+  padding: 0px; }

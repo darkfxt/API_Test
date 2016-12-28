@@ -1,0 +1,55 @@
+/* ======= Variables ======= */
+
+/* ======= Mixins ======= */
+
+/* ======= Estilos ======= */
+.hotel-name {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  & h1 {
+    text-align: left;
+  }
+}
+.regimenByHotel {
+  line-height: 1rem;
+  font-size: 14px;
+  font-weight: bold;
+  color: #DF6800;
+}
+.suite-amenities ul {
+  padding: 0;
+  list-style-type: none;
+}
+.lista {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  margin-bottom: 8px;
+  list-style: none;
+  list-style-type: none;
+  list-style-position: initial;
+  list-style-image: initial;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+  & li {
+    display: inline-block;
+  }
+}
+.lista-iconos {
+  display: inline-block;
+}
+.large-icon {
+  font-size: 20px;
+  font-weight: normal;
+  width: 24px;
+  margin-right: 8px;
+}

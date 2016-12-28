@@ -23,8 +23,10 @@ var imagenes = new Schema ({
 
 var price = new Schema ({
     "value": Number,
-    "payMethod": String
-})
+    "currency": String,
+    "pagaCuotas": Boolean,
+    "pagaDestino": Boolean
+});
 
 const hotelSchema = new Schema ({
     description: description,

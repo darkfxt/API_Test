@@ -1,25 +1,13 @@
-<div class="">
-<div ng-repeat="promo in $ctrl.decorators" class="col-12 offer">
-    <p data-ng-show="promo.rec == true" class="offer-text hotel-recomendado" style="margin:0 0 0 0px;">¡Hotel recomendado!</p>
-</div>
-
-<div class="">
-    <div class="">
-    <img ng-repeat="slide in $ctrl.slides" class="fill"
-         ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
-         ng-hide="!isCurrentlySelected($index)" ng-src="{{ slide.url }}" >
-
-    <a class="arrow prev" href="" ng-click="nextSlide()"></a>
-    <a class="arrow next" href="" ng-click="prevSlide()"></a>
-    <nav class="nav">
-        <div class="wrapper">
-            <ul class="dots">
-                <li class="dot" ng-repeat="slide in $ctrl.slides">
-                    <a href="" ng-class="{'active':isCurrentlySelected($index)}"
-                       ng-click="setCurrentlySelected($index);">{{slide.description}}</a></li>
-            </ul>
-        </div>
-    </nav>
+<div class="col-12 result-slider">
+    <div ng-repeat="promo in decorators" class="col-12 offer">
+        <p data-ng-show="promo.rec == true" class="offer-text hotel-recomendado" style="margin:0 0 0 0px;">¡Hotel recomendado!</p>
     </div>
-</div>
+    <div class="slider">
+        <div class="slide" ng-repeat="image in images" ng-show="image.visible" >
+            <img ng-src="{{image.url}}" class="img-slider"/>
+        </div>
+        <a href="" ng-click="prev()"><span class="icon_fx-arrow-left"> < </span></a>
+        <a href="" ng-click="next()"><span class="icon_fx-arrow-right"> > </span></a>
+
+    </div>
 </div>

@@ -3,7 +3,6 @@
  */
 angular.module('imageSliderModule', [
      'ngAnimate'
-    ,'ngTouch'
     ,'imageSliderController'
     ,'imageSliderComponent'
 ]);

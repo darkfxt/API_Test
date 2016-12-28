@@ -1,7 +1,12 @@
 <div class="price-box">
     <p class="price-description">Precio por noche por habitación</p>
-    <h2 class="priceByNight">{{ $ctrl.price.value | currency }}</h2>
+    <p class="priceByNight">
+        <span class="currency-code">{{ $ctrl.price.currency }}</span>
+        <span class="price-value">{{ $ctrl.price.value }}</span>
+    </p>
     <span class="impuestos-tasas price-description">Impuestos y tasas no incluidos</span>
     <a target="_self" class="button button--lg button--secondary button--block button-detail"
        href="#">Ver hotel</a>
+    <p data-ng-show="$ctrl.price.pagaCuotas" class="payment-methods">Pagá en cuotas</p>
+    <p data-ng-show="$ctrl.price.pagaDestino" class="payment-methods">Pagá en destino</p>
 </div>
