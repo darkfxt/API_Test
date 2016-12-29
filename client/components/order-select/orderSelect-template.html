@@ -1,6 +1,6 @@
 <div class="order-select">
     <label for="ordenar" class="label">Ordenar</label>
-    <select id="ordenar" ng-model="$ctrl.orderProp" class="order-by" ng-change="$ctrl.changedValue({order: $ctrl.orderProp})">
+    <select id="ordenar" ng-model="$ctrl.orderProp" class="order-by" ng-change="$ctrl.onChangeButton({order: $ctrl.orderProp})">
         <option value="decorators.available">Más relevantes</option>
         <option value="price.value">Precio más bajo</option>
         <option value="-price.value">Precio más alto</option>

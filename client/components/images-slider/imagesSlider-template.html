@@ -3,8 +3,8 @@
         <p data-ng-show="promo.rec == true" class="offer-text hotel-recomendado" style="margin:0 0 0 0px;">¡Hotel recomendado!</p>
     </div>
     <div class="slider">
-        <div class="slide" ng-repeat="image in images" ng-show="image.visible" >
-            <img ng-src="{{image.url}}" class="img-slider"/>
+        <div class="slide"   >
+            <img ng-src="{{$ctrl.slides[0].url}}" class="img-slider"/>
         </div>
         <a href="" ng-click="prev()"><span class="icon_fx-arrow-left"> < </span></a>
         <a href="" ng-click="next()"><span class="icon_fx-arrow-right"> > </span></a>
