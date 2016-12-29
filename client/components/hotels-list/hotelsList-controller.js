@@ -25,9 +25,10 @@ angular.module('hotelsListController',[])
 
             });
 
-        $scope.refreshFilter = function (value){
-            console.log(value);
+        this.refreshFilter = function (value){
+            self.orderProperty = value.order;
         };
+
 
 
         self.setStars = function ( qId ) {

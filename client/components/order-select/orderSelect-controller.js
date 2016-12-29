@@ -3,9 +3,11 @@
  */
 angular.module('orderSelectController', [])
     .controller('orderSelectCtrl', function($scope){
-        $scope.orderProp = this.orderBy;
+        var _self = this;
+        this.orderProp = this.orderBy;
         console.log(this.orderBy);
-        $scope.changedValue = function (item){
+        this.changedValue = function (item){
+            _self.onChangeButton(item);
             console.log(this.orderBy);
             console.log(item);
             this.orderBy = item;

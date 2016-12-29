@@ -12,3 +12,6 @@ angular.module('imageSliderComponent', [])
             ,decorators: '<'
         }
     });
+
+
+
