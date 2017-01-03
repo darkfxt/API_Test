@@ -1,0 +1,21 @@
+<div class="filter-box-ctn">
+    <div class="panel-heading clear-padding">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse0">
+                <span class="glyphicon glyphicon-search glyphicon-no-margin"></span>
+                <span>{{ $ctrl.title }}</span>
+                <span class="glyphicon glyphicon-triangle-top pull-right little-caret"></span>
+            </a>
+        </h4>
+    </div>
+    <div id="collapse0" class="panel-collapse collapse in">
+        <div class="ctn-blk hn-ctn">
+            <div class="col-8 ctn-inline std-pad">
+                <input type="text" class="query-text" placeholder="Ingrese el nombre del hotel" ng-model="$ctrl.hotelName" />
+            </div>
+            <div class="col-4 ctn-inline std-pad">
+                <input type="button" value="Aceptar" class="panel-btn" ng-click="$ctrl.onChangeQuery({query :$ctrl.query})" />
+            </div>
+        </div>
+    </div>
+</div>

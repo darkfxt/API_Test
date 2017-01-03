@@ -7,7 +7,7 @@ angular.module('orderSelectComponent', [])
         ,controller: 'orderSelectCtrl'
         ,bindings:{
              orderBy: '=',
-            onChangeButton: '<'
+            onChangeButton: '&'
         }
 
     });

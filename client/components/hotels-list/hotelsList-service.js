@@ -2,9 +2,11 @@
  * Created by MATIASJ on 5/12/2016.
  */
 angular.module('hotelsListService', [])
-    .service('Hoteles', [ '$http', function ( $http ){
+    .service('Hoteles', [ '$http', function ( $http, $q, $timeout ){
+
         return {
-            get : function() {
+            get : function getHotels() {
+
                 return $http.get('/api/hotels');
             },
             create: function (hotelData) {

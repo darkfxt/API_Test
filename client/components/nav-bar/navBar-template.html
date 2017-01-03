@@ -1,0 +1,23 @@
+<div class="top-row-ctn">
+    <div class="row top-row">
+        <div class="brand-ctn col-md-6">
+            <img src="/static/img/logo-almundo.svg">
+        </div>
+        <div class="menu-ctn col-md-6">
+            <ul class="global-menu pull-right">
+                <li ng-repeat="x in $ctrl.globalMenu" class="global-menu item">{{ x.title }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="nav-row-ctn">
+    <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
+        <div class="row nav-row">
+            <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-repeat="y in $ctrl.navBarLinks" class="item"><a href="#">{{ y.title }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

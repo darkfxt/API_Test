@@ -1,3 +1,4 @@
+/******************** Variables ********************/
 /*************** Estilos para fuentes **************/
 @font-face {
   font-family: 'icomoon';
@@ -38,12 +39,28 @@ body {
 .col-2 {
   width: 16.66%; }
 
+.col-3 {
+  width: 25%;
+  float: left; }
+
 .col-6 {
   width: 50%;
   display: inline-block; }
+
+.col-8 {
+  width: 66.66%; }
 
 .col-12 {
   width: 100%; }
 
 .clear-padding {
-  padding: 0px; }
+  padding: 0; }
+
+.ctn-inline {
+  display: inline; }
+
+.ctn-blk {
+  display: block; }
+
+.std-pad {
+  padding: 10px; }

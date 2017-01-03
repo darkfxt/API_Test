@@ -1,0 +1,54 @@
+<div class="filter-box-ctn">
+    <div class="panel-heading clear-padding">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2">
+                <span class="glyphicon glyphicon-star glyphicon-no-margin"></span>
+                <span>{{ $ctrl.title }}</span>
+                <span class="glyphicon glyphicon-triangle-top pull-right little-caret"></span>
+            </a>
+        </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse in">
+        <ul class="list-group">
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="$ctrl.checkboxCtrl.All" ng-change="$ctrl.setStars($ctrl.checkboxCtrl.All)" checked>
+                    Todas las estrellas
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input id="5s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value5" ng-change="$ctrl.selEstrellas[4]=$ctrl.checkboxCtrl.value5" ng-true-value="5" ng-false-value="0">
+                    <div><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1,2,3,4]"></span> </div>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input id="4s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value4" ng-change="$ctrl.selEstrellas[3]=$ctrl.checkboxCtrl.value4" ng-true-value="4" ng-false-value="0">
+                    <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1,2,3]" ></span> </div>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input id="3s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value3" ng-change="$ctrl.selEstrellas[2]=$ctrl.checkboxCtrl.value3" ng-true-value="3" ng-false-value="0">
+                    <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1,2]" ></span> </div>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input id="2s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value2" ng-change="$ctrl.selEstrellas[1]=$ctrl.checkboxCtrl.value2" ng-true-value="2" ng-false-value="0">
+                    <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1]" ></span> </div>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input id="1s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value1" ng-change="$ctrl.selEstrellas[0]=$ctrl.checkboxCtrl.value1" ng-true-value="1" ng-false-value="0">
+                    <div ><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0]" ></span> </div>
+                </label>
+            </div>
+
+
+        </ul>
+    </div>
+</div>

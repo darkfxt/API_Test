@@ -12,9 +12,13 @@
     <link rel="stylesheet" href="/static/libs/angular-rangeslider/angular.rangeSlider.css">
 </head>
 <body>
-<div class="container">
-    <hotels-list></hotels-list>
 
+<div class="container">
+    <header class="header-ctn clear-padding">
+        <nav-bar></nav-bar>
+    </header>
+    <nav-breadcrumb></nav-breadcrumb>
+    <hotels-list hoteles="hoteles"></hotels-list>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
@@ -32,6 +36,13 @@
 <script src="/static/libs/angular-route/angular-route.js"></script>
 
 <script src="/static/app.module.js"></script>
+<!-- Dependencias del navBar component -->
+<script src="/static/components/nav-bar/navBar-component.js"></script>
+<script src="/static/components/nav-bar/navBar-controller.js"></script>
+<script src="/static/components/nav-bar/navBar-module.js"></script>
+<!-- Dependencias del navBreadcrumb component -->
+<script src="/static/components/nav-breadcrumb/navBreadcrumb-component.js"></script>
+<script src="/static/components/nav-breadcrumb/navBreadcrumb-module.js"></script>
 <!-- Dependencias del hotelList component -->
 <script src="/static/components/hotels-list/hotelsList-controller.js"></script>
 <script src="/static/components/hotels-list/hotelsList-service.js"></script>
@@ -59,6 +70,21 @@
 <script src="/static/components/order-select/orderSelect-controller.js"></script>
 <script src="/static/components/order-select/orderSelect-component.js"></script>
 <script src="/static/components/order-select/orderSelect-module.js"></script>
+<!-- Dependencias del nameFilter component (Requerido por filterBox) -->
+<script src="/static/components/filter-box/name-filter/nameFilter-component.js"></script>
+<script src="/static/components/filter-box/name-filter/nameFilter-module.js"></script>
+<!-- Dependencias del priceFilter component (Requerido por filterBox) -->
+<script src="/static/components/filter-box/price-filter/priceFilter-component.js"></script>
+<script src="/static/components/filter-box/price-filter/priceFilter-module.js"></script>
+<!-- Dependencias del starsFilter component (Requerido por filterBox) -->
+<script src="/static/components/filter-box/stars-filter/starsFilter-component.js"></script>
+<script src="/static/components/filter-box/stars-filter/starsFilter-module.js"></script>
+<!-- Dependencias del hotelsMap component (Requerido por filterBox) -->
+<script src="/static/components/filter-box/hotels-map/hotelsMap-component.js"></script>
+<script src="/static/components/filter-box/hotels-map/hotelsMap-module.js"></script>
+<!-- Dependencias del dateFilter component (Requerido por filterBox) -->
+<script src="/static/components/date-filter/dateFilter-component.js"></script>
+<script src="/static/components/date-filter/dateFilter-module.js"></script>
 <!-- Dependencias del filterBox component -->
 <script src="/static/components/filter-box/filterBox-controller.js"></script>
 <script src="/static/components/filter-box/filterBox-component.js"></script>

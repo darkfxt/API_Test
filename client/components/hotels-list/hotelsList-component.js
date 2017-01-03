@@ -4,5 +4,8 @@
 angular.module('hotelsListComponent',[])
     .component('hotelsList', {
          templateUrl:'/static/components/hotels-list/hotelsList-template.html'
-       , controller: 'hotelsListCtrl'
+        ,controller: 'hotelsListCtrl'
+        ,bindings: {
+             hoteles: '<'
+        }
     });

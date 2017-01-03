@@ -1,0 +1,19 @@
+<div class="filter-box-ctn">
+    <div class="panel-heading clear-padding">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1">
+                <span class="glyphicon glyphicon-usd glyphicon-no-margin"></span>
+                <span>{{ $ctrl.title }}</span>
+                <span class="glyphicon glyphicon-triangle-top pull-right little-caret"></span>
+            </a>
+        </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+        <span> ctrl {{ $ctrl.priceMin }} </span>
+        <span> precio {{ priceMax }} </span>
+        <!--<div id="slider-range"></div>-->
+        <div range-slider min="$ctrl.priceMin" max="$ctrl.priceMax" model-min="$ctrl.minPrice" model-max="$ctrl.maxPrice" step="5" filter="currency" filter-options="USD$" style="margin: 0 0 0 0px;"></div>
+        <div class="col-6"><span data-ng-bind="userMinPrice | currency"></span></div><div class="col-6 derecha"><span data-ng-bind="userMaxPrice | currency"></span></div>
+
+    </div>
+</div>

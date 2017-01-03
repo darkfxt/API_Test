@@ -4,4 +4,8 @@
 angular.module('filterBoxModule', [
      'filterBoxComponent'
     ,'filterBoxController'
+    ,'nameFilterModule'
+    ,'priceFilterModule'
+    ,'starsFilterModule'
+    ,'hotelsMapModule'
 ]);

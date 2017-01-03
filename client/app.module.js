@@ -3,5 +3,7 @@
  */
 angular.module('testApp',[
      'hotelsListModule'
+    ,'navBarModule'
+    ,'navBreadcrumbModule'
 
 ]);

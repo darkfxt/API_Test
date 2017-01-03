@@ -1,6 +1,10 @@
 <div class="row">
-    <section class="col-md-3 col-xs-12" >
-        <filter-box></filter-box>
+    <date-filter filtro="$ctrl.dFilter"></date-filter>
+</div>
+<div class="row">
+    <section class="col-md-3 col-xs-12">
+        <hotels-map title="'Ver hoteles en el mapa'"></hotels-map>
+        <filter-box query="$ctrl.queryFilter" price-max="$ctrl.userMaxPrice" price-min="$ctrl.userMinPrice" on-change-query="$ctrl.refreshQuery" on-change-price="$ctrl.refreshPriceRange"></filter-box>
     </section>
     <!-- Genero el contenedor con la vista de los hoteles -->
     <!-- En tablets o phones es full width en desktop es 75% -->
@@ -12,7 +16,7 @@
             </li>
             <!-- Recorro el arreglo de hoteles para generar la lista de los mismos -->
             <!--<li ng-repeat="hotel in $ctrl.hotels | price:userMinPrice:userMaxPrice | filtrarEstrellas:$ctrl.selEstrellas | orderBy:$ctrl.orderProp" >-->
-            <li ng-repeat="hotel in $ctrl.hotels | orderBy:$ctrl.orderProperty" >
+            <li ng-repeat="hotel in $ctrl.hotels | filter:$ctrl.queryFilter | orderBy:$ctrl.orderProperty" >
                 <!-- A cada componente hotelCluster le paso un hotel para que le de formato y lo distribuya entre sus childs -->
                 <!-- Comienzo cluster de hotel -->
                 <hotel-cluster hotel-data="hotel"></hotel-cluster>

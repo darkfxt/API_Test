@@ -6,7 +6,6 @@ angular.module('hotelsListModule',[
     ,'underscore'
     ,'ngAnimate'
     ,'ngSanitize'
-
     ,'hotelsListController'
     ,'hotelsListComponent'
     ,'hotelsListService'
