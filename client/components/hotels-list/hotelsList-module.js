@@ -12,5 +12,6 @@ angular.module('hotelsListModule',[
     ,'hotelsListFilter'
     ,'hotelClusterModule'
     ,'orderSelectModule'
+    ,'dateFilterModule'
     ,'filterBoxModule'
 ]);

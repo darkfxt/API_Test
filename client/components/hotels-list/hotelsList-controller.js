@@ -25,7 +25,7 @@ angular.module('hotelsListController',[])
                 $scope.minPrice = Math.round(_.min(data, function ( hotel ){ return hotel.price.value }).price.value * 0.8);
                 self.userMinPrice = _.min(data, function ( hotel ){ return hotel.price.value }).price.value;
 
-                angular.bootstrap($('filter-box'));
+                //angular.bootstrap($('filter-box'));
 
             })}
 

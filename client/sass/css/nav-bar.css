@@ -1,6 +1,15 @@
 /* ======= Variables ======= */
 /* ======= Mixins ======= */
 /* ======= Estilos ======= */
+@media (max-width: 1200px) {
+  .header-res-ctn {
+    padding: 0; } }
+
+@media (min-width: 1200px) {
+  .header-res-ctn {
+    padding-left: calc((100% - 1170px)/2);
+    padding-right: calc((100% - 1170px)/2); } }
+
 .header-ctn {
   color: #fff;
   background-image: url("/static/img/header-bg.jpg");
@@ -28,3 +37,42 @@
 .brand-ctn {
   max-height: 48px;
   margin: 16px 0px 16px 0; }
+
+.navbar-primary {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  zoom: 1;
+  margin: 0;
+  line-height: 24px;
+  font-size: 16px; }
+
+.offers-menu {
+  list-style: none;
+  text-align: center;
+  margin: 0; }
+
+.nav-row-ctn {
+  background-color: rgba(0, 44, 119, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+
+.om-item {
+  margin: 0;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: top;
+  height: 34px; }
+
+a.nav-link {
+  display: inline-block;
+  padding: 8px 20px 8px 20px;
+  transition: 0.2s ease-in-out;
+  color: #fff; }
+
+a.glob-link {
+  color: #fff; }
