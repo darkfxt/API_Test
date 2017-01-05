@@ -1,8 +1,24 @@
 <div class="df-ctn">
-    <h2>Hoteles disponibles para:</h2>
-    <span>{{ $ctrl.loc }}</span>
-    <span>{{ $ctrl.from }}</span>
-    <span>{{ $ctrl.to }}</span>
-    <span>{{ $ctrl.pax }}</span>
-    <span><a href="">Modificar Búsqueda</a></span>
+        <h3>Hoteles disponibles para:</h3>
+        <ul>
+            <li>
+                <span class="glyphicon glyphicon-map-marker"></span>
+                <span>{{ $ctrl.loc }}</span>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-calendar"></span>
+                <span>{{ $ctrl.from }}</span>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-calendar"></span>
+                <span>{{ $ctrl.to }}</span>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-user"></span>
+                <span>{{ $ctrl.pax }}</span>
+            </li>
+            <li>
+                <span><a href="">Modificar Búsqueda</a></span>
+            </li>
+        </ul>
 </div>

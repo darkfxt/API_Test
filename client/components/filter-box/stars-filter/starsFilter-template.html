@@ -19,7 +19,7 @@
             </div>
             <div class="checkbox">
                 <label>
-                    <input id="5s" type="checkbox" ng-model="$ctrl.checkboxCtrl.value5" ng-change="$ctrl.selEstrellas[4]=$ctrl.checkboxCtrl.value5" ng-true-value="5" ng-false-value="0">
+                    <input id="5s" type="checkbox" ng-model="$ctrl.stars" ng-change="$ctrl.onChangeStars({stars: $ctrl.stars})" ng-true-value="5" ng-false-value="0">
                     <div><span class="glyphicon glyphicon-star gold" ng-repeat="i in [0,1,2,3,4]"></span> </div>
                 </label>
             </div>

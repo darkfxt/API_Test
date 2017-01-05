@@ -8,7 +8,6 @@ var hotelsCtrl = require('./hotels').Controller;
 
 // *** Rutas de mi API ***
 Router.get('/', function( req, res ){
-
     res.render("index");
 });
 

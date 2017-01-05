@@ -4,6 +4,7 @@
 angular.module('navBreadcrumbComponent', [])
     .component('navBreadcrumb', {
          templateUrl: '/static/components/nav-breadcrumb/navBreadcrumb-template.html'
+        ,controller: 'navBreadcrumbCtrl'
         ,bindings: {
             hierarchyTree: '<'
         }

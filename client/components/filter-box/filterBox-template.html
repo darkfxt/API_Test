@@ -1,10 +1,10 @@
 <div class="filtrar-titulo">Filtrar</div>
 <div id="search-filters" class="panel fxt-click-panel">
 
-    <div class="panel-body filter-panel">
+    <div class="panel-body filter-panel" style="padding-left: -15px">
         <name-filter title="'Nombre de hotel'" hotel-name="$ctrl.query" on-change-query="$ctrl.refreshQuery"></name-filter>
-        <price-filter title="'Precio por noche'" price-min="$ctrl.priceMin" price-max="$ctrl.priceMax" on-price-change="$ctrl.refreshPriceRange"></price-filter>
-        <stars-filter title="'Estrellas'"></stars-filter>
+        <price-filter ng-if="$ctrl.absMin !== undefined" title="'Precio por noche'" abs-min="$ctrl.absMin" abs-max="$ctrl.absMax" price-min="$ctrl.priceMin" price-max="$ctrl.priceMax" on-price-change="$ctrl.refreshPriceRange"></price-filter>
+        <stars-filter title="'Estrellas'" stars="$ctrl.stars" on-change-stars="$ctrl.filterByStars"></stars-filter>
     </div>
 
 </div>

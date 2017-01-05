@@ -5,3 +5,7 @@
   width: 100%; }
   .hoteles li {
     clear: both; }
+
+section.left-panel {
+  padding-left: 0;
+  margin-top: 25px; }

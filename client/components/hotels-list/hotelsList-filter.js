@@ -25,9 +25,8 @@ angular.module('hotelsListFilter')
     .filter('price', function ( ){
         return function ( hotels, gt, lt) {
             hotels = hotels.filter ( function ( hotel ) {
-                return hotel.price >= gt && hotel.price <= lt;
+                return hotel.price.value >= gt && hotel.price.value <= lt;
             });
-
             return hotels;
         }
     });

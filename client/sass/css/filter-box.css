@@ -1,10 +1,26 @@
 /* ========== Variables ========== */
 /* ========== Styles ========== */
-.filter-box-ctn {
+.filter-box-ctn, .map-ctn {
+  padding-left: -15px;
   margin-bottom: 0;
   border-bottom: 4px solid #F4F4F4;
-  box-shadow: 0 1px 3px 0 rgba(119, 119, 119, 0.3);
-  position: relative; }
+  box-shadow: 0 1px 3px 0 rgba(119, 119, 119, 0.3); }
+
+.map-ctn {
+  text-align: center; }
+  .map-ctn .map-description {
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 8px; }
+    .map-ctn .map-description a {
+      color: #157ab1; }
+  .map-ctn .map-image {
+    background-image: url("/static/img/result-map.png");
+    height: 100px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: cover; }
 
 .filtrar-titulo {
   line-height: 24px;
@@ -96,3 +112,31 @@ input[type="button"] {
 
 .hn-ctn {
   margin-bottom: 5px; }
+
+.df-ctn {
+  display: block;
+  border: 1px solid #CCC;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 8px;
+  padding-bottom: 15px; }
+  .df-ctn ul {
+    display: inline;
+    line-height: 18px;
+    font-size: 14px;
+    list-style-position: inside;
+    margin-bottom: 8px; }
+  .df-ctn li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 2%; }
+  h3 .df-ctn {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0; }

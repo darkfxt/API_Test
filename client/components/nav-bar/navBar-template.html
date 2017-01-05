@@ -5,7 +5,7 @@
         </div>
         <div class="menu-ctn col-md-6">
             <ul class="global-menu pull-right">
-                <li ng-repeat="x in $ctrl.globalMenu" class="global-menu item">
+                <li ng-repeat="x in $ctrl.globalMenu" ng-class="$first?'first':'item'"> <!--class="global-menu item">-->
                     <span ng-show="x.type == 'icon' && x.icon == 'person'" class="glyphicon glyphicon-user"></span>
                     <span ng-show="x.type == 'text' || x.type == 'icon' || x.type == 'drop'"><a class="glob-link">{{ x.title }}</a></span>
                     <span ng-show="x.type == 'drop'" class="glyphicon glyphicon-chevron-down little-caret"></span>

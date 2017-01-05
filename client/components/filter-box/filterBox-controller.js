@@ -3,7 +3,6 @@
  */
 angular.module('filterBoxController', [])
     .controller('filterBoxCtrl', ['$scope', 'Hoteles', function( $scope, Hoteles ){
-        /*this.refreshQuery = function (value){
-            self.queryFilter = value.query;
-        };*/
+        this.absMin = Math.round(this.priceMin * 0.8);
+        this.absMax = Math.round(this.priceMax * 1.1);
     }]);

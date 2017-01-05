@@ -6,11 +6,11 @@ angular.module('filterBoxComponent', [])
          templateUrl: '/static/components/filter-box/filterBox-template.html'
         ,controller: 'filterBoxCtrl'
         ,bindings:{
-             priceMin: '='
-            ,priceMax: '='
-            ,query: '='
-            ,onChangeQuery: '<'
-            ,onChangePrice: '<'
-            ,onLoad: '&'
+              query: '='
+             ,priceMin: '='
+             ,priceMax: '='
+             ,stars: '='
+             ,onChangeQuery: '&'
+             ,onChangeStars: '&'
         }
     });
