@@ -3,8 +3,8 @@
 
     <div class="panel-body filter-panel" style="padding-left: -15px">
         <name-filter title="'Nombre de hotel'" hotel-name="$ctrl.query" on-change-query="$ctrl.refreshQuery"></name-filter>
-        <price-filter ng-if="$ctrl.absMin !== undefined" title="'Precio por noche'" abs-min="$ctrl.absMin" abs-max="$ctrl.absMax" price-min="$ctrl.priceMin" price-max="$ctrl.priceMax" on-price-change="$ctrl.refreshPriceRange"></price-filter>
-        <stars-filter title="'Estrellas'" stars="$ctrl.stars" on-change-stars="$ctrl.filterByStars"></stars-filter>
+        <price-filter ng-if="$ctrl.absMin !== undefined" title="'Precio por noche'" abs-min="$ctrl.absMin" abs-max="$ctrl.absMax" price-min="$ctrl.priceMin" price-max="$ctrl.priceMax"></price-filter>
+        <stars-filter title="'Estrellas'" stars="$ctrl.stars" on-change-stars="$ctrl.onChangeStars"></stars-filter>
     </div>
 
 </div>

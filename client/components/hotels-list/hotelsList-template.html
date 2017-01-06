@@ -4,7 +4,6 @@
 <div class="row">
     <section class="col-md-3 col-xs-12 left-panel">
         <hotels-map title="'Ver hoteles en el mapa'"></hotels-map>
-        {{ $ctrl.selEstrellas }}
         <filter-box ng-if="$ctrl.userMaxPrice !== undefined" query="$ctrl.queryFilter" price-max="$ctrl.userMaxPrice" price-min="$ctrl.userMinPrice" stars="$ctrl.selEstrellas" on-change-query="$ctrl.refreshQuery" on-change-stars="$ctrl.filterByStars"></filter-box><!--on-change-price="$ctrl.refreshPriceRange" ></filter-box>-->
     </section>
     <!-- Genero el contenedor con la vista de los hoteles -->
@@ -17,7 +16,7 @@
             </li>
             <!-- Recorro el arreglo de hoteles para generar la lista de los mismos -->
             <!--<li ng-repeat="hotel in $ctrl.hotels | price:userMinPrice:userMaxPrice | filtrarEstrellas:$ctrl.selEstrellas | orderBy:$ctrl.orderProp" >-->
-            <li ng-repeat="hotel in $ctrl.hotels | filter:$ctrl.queryFilter | price:$ctrl.userMinPrice:$ctrl.userMaxPrice  | orderBy:$ctrl.orderProperty" >
+            <li ng-repeat="hotel in $ctrl.hotels | filter:$ctrl.queryFilter | price:$ctrl.userMinPrice:$ctrl.userMaxPrice  | filtrarEstrellas:$ctrl.selEstrellas | orderBy:$ctrl.orderProperty" >
                 <!-- A cada componente hotelCluster le paso un hotel para que le de formato y lo distribuya entre sus childs -->
                 <!-- Comienzo cluster de hotel -->
                 <hotel-cluster hotel-data="hotel"></hotel-cluster>

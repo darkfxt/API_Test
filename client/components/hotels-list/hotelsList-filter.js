@@ -9,9 +9,9 @@ angular.module('hotelsListFilter', [])
 
             for ( var a = 0 ; a <= selEstrellas.length ; a++ ) {
                 angular.forEach(hotels, function ( hotel ){
-                    console.log(selEstrellas + '<br>' + hotel.stars);
+                    console.log(selEstrellas + '<braulio>' + hotel.description.stars);
                     //if ( hotel.stars == selEstrellas ){
-                    if (hotel.stars == selEstrellas[a]){
+                    if (hotel.description.stars == selEstrellas[a]){
                         result.push(hotel)
                     }
                 });

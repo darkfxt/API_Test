@@ -6,9 +6,7 @@ angular.module('hotelsListController',[])
 
         var self = this;
         self.orderProperty = 'decorators.available';
-        self.checkboxCtrl = {"All":true, "value1":1, "value2":2, "value3":3, "value4":4, "value5":5  };
-        self.dFilter = [];
-        self.selEstrellas = [ 1, 2, 3, 4, 5 ] ;
+        self.selEstrellas = [] ;
         $scope.noWrapSlides = false;
 
         console.log('hola mundo 2');
@@ -28,38 +26,19 @@ angular.module('hotelsListController',[])
 
 
 
-        this.refreshFilter = function (value){
+        this.refreshFilter = function ( value ){
             self.orderProperty = value.order;
             console.log(self.orderProperty);
         };
 
-        this.refreshQuery = function (value){
+        this.refreshQuery = function ( value ){
             self.queryFilter = value.query;
         };
-
-
-        self.setStars = function ( qId ) {
-            if ( !qId ) {
-                self.selEstrellas = [ 0, 0, 0, 0, 0 ] ;
-                self.checkboxCtrl.All = false;
-            } else {
-                self.selEstrellas = [ 1, 2, 3, 4, 5 ] ;
-                self.checkboxCtrl.All = true;
-            }
-        };
-
 
         this.filterByStars = function ( value ){
             console.log(value.stars);
 
-            self.selEstrellas.push(value.stars);
         };
-
-        /*self.filterByPrice = function (  ){
-            var prMin = $( "#slider-range" ).slider( "values", 0 );
-            var prMax = $( "#slider-range" ).slider( "values", 1 );
-
-        }*/
 
     }]);
 

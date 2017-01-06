@@ -9,5 +9,4 @@ angular.module('orderSelectComponent', [])
             orderBy: '=',
             onChangeButton: '&'
         }
-
     });
