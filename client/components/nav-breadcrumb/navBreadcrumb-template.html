@@ -1,6 +1,6 @@
-<ol class="breadcrumb" style="padding-left: 0">
+<ol class="breadcrumb nav-breadcrumb" >
     <li ng-repeat="links in $ctrl.hierarchyTree">
-        <a ng-if="!$last" href="links.url">{{ links.description }}</a>
+        <a ng-if="!$last" href="links.url"><span>{{ links.description }}</span></a>
         <span ng-if="$last">{{ links.description }}</span>
     </li>
 </ol>

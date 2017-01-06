@@ -35,6 +35,8 @@ client/libs
 documentacion
 # Directorio con archivos en desuso
 deprecated
+# Comprimido por las dudas
+*.rar
 
 # Directory .idea
 .idea

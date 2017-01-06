@@ -4,7 +4,24 @@
 
 /* ======= Estilos ======= */
 .breadcrumb {
-  .bc-align {
-    padding-left: 0;
+  padding-left: 0;
+  .nav-breadcrumb {
+    padding: 0;
+    margin-left: -15px;
   }
+  span {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    line-height: 16px;
+    font-size: 11px;
+    font-weight: normal;
+  }
+
+}
+.nav-breadcrumb.breadcrumb {
+  margin-left: -15px;
+}
+ol.nav-breadcrumb {
+  margin-bottom: 0;
 }
