@@ -28,7 +28,7 @@ angular.module('starsFilterController', [])
                 if ( indice >= 0){
                 this.stars.splice(indice,1);
             }}
-            this.onChangeStars;
+
             $scope.selectedAll = this.estrellas.every(function (item){
                     return item.Selected == true;
                 })
