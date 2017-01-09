@@ -4,7 +4,6 @@
 angular.module('orderSelectComponent', [])
     .component('orderSelect', {
          templateUrl: '/static/components/order-select/orderSelect-template.html'
-        ,controller: 'orderSelectCtrl'
         ,bindings:{
             orderBy: '=',
             onChangeButton: '&'

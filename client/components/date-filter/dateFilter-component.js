@@ -4,7 +4,6 @@
 angular.module('dateFilterComponent', [])
     .component('dateFilter', {
          templateUrl: '/static/components/date-filter/dateFilter-template.html'
-        ,controller: 'dateFilterCtrl'
         ,bindings: {
              loc: '<'
             ,from: '<'

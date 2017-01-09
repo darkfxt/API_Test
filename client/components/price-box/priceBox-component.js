@@ -4,7 +4,6 @@
 angular.module('priceBoxComponent', [])
     .component('priceBox',{
         templateUrl: '/static/components/price-box/priceBox-template.html',
-        controller: 'priceBoxCtrl',
         bindings:{
             price: '<'
         }
